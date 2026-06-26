@@ -44,6 +44,7 @@ Make sure you have **Docker** and **Docker Compose** installed.
 
 ### 1. Environment Variables
 Create a `.env` file in the root directory:
+
 ```env
 DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/contract_db
 OPENAI_API_KEY=your_openai_api_key_here
