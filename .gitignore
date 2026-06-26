@@ -1,0 +1,84 @@
+# ==========================================
+# ======= Backend (Python & Docker) ========
+# ==========================================
+
+# Compiled Python files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+local/
+
+# Environment variables & secrets (CRITICAL!)
+.env
+.env.local
+.env.production
+.env.development
+*.env
+
+# Docker & Databases
+.docker/
+postgres_data/
+*.db
+*.sqlite3
+
+# Alembic compiled cache
+alembic/**/*.pyc
+
+# ==========================================
+# ======= Frontend (Node / React / Next) ===
+# ==========================================
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# Build and distribution directories
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+.cache/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Frontend local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor and Tooling configs
+.eslintcache
+.stylelintcache
+.parcel-cache
+.tscache
+.turbo/
+
+# ==========================================
+# ======= General IDEs & OS Files ==========
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db

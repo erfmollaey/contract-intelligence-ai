@@ -1,0 +1,37 @@
+services:
+  postgres_db:
+    image: postgres:16-alpine
+    container_name: contract_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: super_secret_password_123
+      POSTGRES_DB: contract_intel_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - contract_network
+
+  web:
+    build: ./backend
+    container_name: contract_backend
+    restart: unless-stopped
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8001:8001"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://admin:super_secret_password_123@postgres_db:5432/contract_intel_db
+    depends_on:
+      - postgres_db
+    networks:
+      - contract_network
+
+volumes:
+  postgres_data:
+
+networks:
+  contract_network:
+    driver: bridge
