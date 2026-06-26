@@ -47,7 +47,7 @@ Create a `.env` file in the root directory:
 
 ```env
 DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/contract_db
-OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here```
 
 ## Technical Challenges Faced & Solved
 The Alembic Auto-generation Metadata Desync
