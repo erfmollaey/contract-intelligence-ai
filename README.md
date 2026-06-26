@@ -21,7 +21,7 @@ Built with a modern, asynchronous Python stack, this repository serves as a prod
 | Category | Technology |
 | :--- | :--- |
 | **Language** | Python 3.11+ |
-| **Framework** | [FastAPI / Django - *Choose yours*] |
+| **Framework** | FastAPI |
 | **Database** | PostgreSQL |
 | **ORM** | SQLAlchemy (Async) |
 | **Migrations**| Alembic |
